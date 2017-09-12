@@ -1,0 +1,11 @@
+<div class="group" [formGroup]="formGroup">      
+  <input formControlName="{{inputName}}" 
+    class="form-control" type="{{type}}" 
+    id="{{inputName}}" placeholder=" ">
+  <span class="highlight"></span>
+  <span class="bar"></span>
+  <label for="{{inputName}}">{{label}} <span class="optional" *ngIf="optional">(optional)</span></label>
+  <!--<sc-error-alert *ngIf="formError" [errors]="[formError]"></sc-error-alert>-->
+</div>
+
+

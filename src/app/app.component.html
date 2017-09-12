@@ -1,3 +1,15 @@
 <h1>
   {{title}}
 </h1>
+<div class="container">
+  <text-input [formGroup]="testForm" [inputName]="'name'" 
+    [type]="'text'" [label]="'Name'">
+  </text-input>
+  <text-input [formGroup]="testForm" [inputName]="'email'" 
+    [type]="'email'" [label]="'Email'">
+  </text-input> 
+</div>
+
+<div>
+  {{ testForm.value | json }}
+</div>
