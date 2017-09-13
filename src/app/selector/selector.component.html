@@ -1,0 +1,11 @@
+<div [formGroup]="formGroup" class="mdl-selectfield">
+  <label for="{{inputName}}" class="{{labelClasses}}">{{label}}</label>
+  <select formControlName="{{inputName}}" class="{{classes}} browser-default"
+    [ngClass]="placeholderText ? 'placeholder' : 'options'">
+    <option value="null" disabled selected class="placeholder">{{placeholder}}</option>
+    <option class="options" *ngFor="let option of options" value="{{option.value}}" >
+      {{option.name}}
+    </option>
+  </select>
+  <!--<sc-error-alert *ngIf="formError" [errors]="[formError]"></sc-error-alert>-->
+</div>

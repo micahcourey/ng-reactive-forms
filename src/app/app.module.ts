@@ -7,12 +7,14 @@ import { ValidationService } from './services/validation.service';
 
 import { AppComponent } from './app.component';
 import { TextInputComponent } from './text-input/text-input.component';
+import { SelectorComponent } from './selector/selector.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TextInputComponent
+    TextInputComponent,
+    SelectorComponent
   ],
   imports: [
     BrowserModule,

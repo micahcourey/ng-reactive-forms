@@ -1,0 +1,62 @@
+/* ==========  Select Field Variables ========== */
+$color-black: "0,0,0";
+$select-background-color: transparent;
+$select-border-color: #757575 !default;
+$select-label-color: #0E6BA8;
+$select-font-size: 18px;
+$select-color: #464a4c; 
+$select-padding: 6px 10px 2px 5px;
+
+/* ==========  Select Field ========== */
+.mdl-selectfield {
+  margin-bottom: 2.8em;
+  top: -28px;
+  margin-bottom: 2px;
+  position: relative;
+    &:after {
+        position: absolute;
+        top: 2em;
+        right: 0.5em;
+        /* Styling the down arrow */
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: .25em solid transparent;
+        border-right: .25em solid transparent;
+        border-top: .375em solid $select-border-color;
+        pointer-events: none;
+    }
+}
+/* Style Select Field */
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: $select-padding;
+  font-size: $select-font-size;
+  color: $select-color;
+  border: none;
+  border-bottom: 1px solid $select-border-color;
+}
+.options {
+  color: $select-color;
+}
+.placeholder {
+  color:#999; 
+}
+/* Remove focus */
+select:focus {
+  outline: none}
+
+/* Hide label */
+.mdl-selectfield label {
+  font-size:14px;
+  color: $select-label-color;
+  margin-bottom: 0;
+}
+/* Use custom arrow */
+.mdl-selectfield select {
+  appearance: none
+}
+

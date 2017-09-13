@@ -1,15 +1,18 @@
-<h1>
-  {{title}}
-</h1>
 <div class="container">
-  <text-input [formGroup]="testForm" [inputName]="'name'" 
-    [type]="'text'" [label]="'Name'">
-  </text-input>
-  <text-input [formGroup]="testForm" [inputName]="'email'" 
-    [type]="'email'" [label]="'Email'">
-  </text-input> 
-</div>
-
-<div>
-  {{ testForm.value | json }}
+  <h1>{{title}}</h1>
+  <div class="form">
+    <text-input [formGroup]="testForm" [inputName]="'name'" 
+      [type]="'text'" [label]="'Name'">
+    </text-input>
+    <text-input [formGroup]="testForm" [inputName]="'email'" 
+      [type]="'email'" [label]="'Email'">
+    </text-input>
+    <selector 
+      [formGroup]="testForm" [inputName]="'user_role'" [placeholder]="'Select a user role'"
+      [label]="'User Role'" [options]="userRoles">
+    </selector> 
+  </div>
+  <div>
+    {{ testForm.value | json }}
+  </div>
 </div>
