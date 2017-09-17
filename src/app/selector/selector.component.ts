@@ -12,7 +12,7 @@ export class SelectorComponent implements OnChanges, DoCheck {
   @Input() inputName: string;
   @Input() label: string;
   @Input() placeholder: string;
-  @Input() options;
+  @Input() options: any[];
   @Input() classes: string;
   @Input() labelClasses: string;
 

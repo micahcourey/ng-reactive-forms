@@ -1,4 +1,4 @@
-<div [formGroup]="formGroup" class="mdl-selectfield">
+<div [formGroup]="formGroup" class="mdl-selectfield" [ngClass]="{errorgroup: formError}">
   <label for="{{inputName}}" class="{{labelClasses}}">{{label}}</label>
   <select formControlName="{{inputName}}" class="{{classes}} browser-default"
     [ngClass]="placeholderText ? 'placeholder' : 'options'">
@@ -7,5 +7,5 @@
       {{option.name}}
     </option>
   </select>
-  <!--<sc-error-alert *ngIf="formError" [errors]="[formError]"></sc-error-alert>-->
+  <error-text *ngIf="formError" [errors]="[formError]"></error-text>
 </div>

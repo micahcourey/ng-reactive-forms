@@ -7,7 +7,15 @@ export class ValidationService {
   validationMessages: {};
 
   constructor() {
-    this.validationMessages = {};
+    this.validationMessages = {
+      name: { 
+        required: 'Name is required', 
+      },
+      email: {
+        required: 'Email address is required',
+        email: 'Please input a valid email address'
+      } 
+    };
   }
 
   formErrorGenerator(formGroup: FormGroup, key: string) {

@@ -1,10 +1,8 @@
+@import '../../styles.scss';
 /* ==========  Select Field Variables ========== */
 $color-black: "0,0,0";
 $select-background-color: transparent;
-$select-border-color: #757575 !default;
-$select-label-color: #0E6BA8;
 $select-font-size: 18px;
-$select-color: #464a4c; 
 $select-padding: 6px 10px 2px 5px;
 
 /* ==========  Select Field ========== */
@@ -24,7 +22,7 @@ $select-padding: 6px 10px 2px 5px;
         content: '';
         border-left: .25em solid transparent;
         border-right: .25em solid transparent;
-        border-top: .375em solid $select-border-color;
+        border-top: .375em solid $border-color;
         pointer-events: none;
     }
 }
@@ -35,12 +33,12 @@ select {
   width: 100%;
   padding: $select-padding;
   font-size: $select-font-size;
-  color: $select-color;
+  color: $text-color;
   border: none;
-  border-bottom: 1px solid $select-border-color;
+  border-bottom: 1px solid $border-color;
 }
 .options {
-  color: $select-color;
+  color: $text-color;
 }
 .placeholder {
   color:#999; 
@@ -52,11 +50,14 @@ select:focus {
 /* Hide label */
 .mdl-selectfield label {
   font-size:14px;
-  color: $select-label-color;
+  color: $label-color;
   margin-bottom: 0;
 }
 /* Use custom arrow */
 .mdl-selectfield select {
   appearance: none
+}
+.errorgroup {
+  margin-bottom: 29px;
 }
 

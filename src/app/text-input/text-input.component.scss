@@ -1,8 +1,10 @@
+@import '../../styles.scss';
+
 * { 
   box-sizing:border-box; 
 }
 .optional {
-  color: #757575;
+  color: $border-color;
   font-size: 0.8rem;
 }
 .group 			  { 
@@ -15,7 +17,7 @@ input 				{
   display:block;
   width: 100%;
   border:none;
-  border-bottom:1px solid #757575;
+  border-bottom:1px solid $border-color;
 }
 input:focus 		{ outline:none; }
 
@@ -37,7 +39,7 @@ label 				 {
 input:focus ~ label, input:not(:placeholder-shown) ~ label	{
   top:-20px;
   font-size:14px;
-  color: #0E6BA8;
+  color: $label-color;
 }
 
 /* BOTTOM BARS ================================= */
@@ -48,7 +50,7 @@ input:focus ~ label, input:not(:placeholder-shown) ~ label	{
   width:0;
   bottom:1px; 
   position:absolute;
-  background:#0E6BA8; 
+  background: $label-color; 
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
@@ -59,7 +61,12 @@ input:focus ~ label, input:not(:placeholder-shown) ~ label	{
 .bar:after {
   right:50%; 
 }
-
+.error:before, .error:after {
+  background: $error-text;
+}
+.errorgroup {
+  margin-bottom: 29px;
+}
 /* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
@@ -85,14 +92,14 @@ input:focus ~ .highlight {
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-	from { background:#0E6BA8;; }
+	from { background: $label-color;; }
   to 	{ width:0; background:transparent; }
 }
 @-moz-keyframes inputHighlighter {
-	from { background:#0E6BA8;; }
+	from { background: $label-color;; }
   to 	{ width:0; background:transparent; }
 }
 @keyframes inputHighlighter {
-	from { background:#0E6BA8;; }
+	from { background: $label-color;; }
   to 	{ width:0; background:transparent; }
 }
