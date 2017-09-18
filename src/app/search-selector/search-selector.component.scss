@@ -1,0 +1,174 @@
+@import '../../styles.scss';
+/* ==========  Select Field Variables ========== */
+$color-black: "0,0,0";
+$select-background-color: transparent;
+$select-font-size: 18px;
+$select-padding: 4px 10px 2px 5px;
+
+/* ==========  Select Field ========== */
+.dropdown-input {
+  margin-top: 10px;
+}
+.mdl-selectfield {
+  margin-bottom: 2.8em;
+  top: -28px;
+  margin-bottom: 2px;
+  position: relative;
+    &:after {
+        position: absolute;
+        top: 2.4em;
+        right: 0.5em;
+        /* Styling the down arrow */
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: .25em solid transparent;
+        border-right: .25em solid transparent;
+        border-top: .375em solid $border-color;
+        pointer-events: none;
+    }
+}
+/* Style Select Field */
+.select {
+  background-color: #fff;
+  width: 100%;
+  padding: $select-padding;
+  font-size: $select-font-size;
+  color: $text-color;
+  overflow-y: auto;
+  max-height: 400px;
+  z-index: 1000;
+  position: absolute;
+  border: 1px solid $label-color;
+  margin-bottom: 1em;
+  margin-top: -16px;
+}
+.selected {
+  margin-left: 8px;
+  font-size: $select-font-size;
+  color: $text-color;
+}
+.border {
+  padding-top: 4px;
+  border-bottom: 1px solid $border-color;
+}
+.options {
+  padding-left: 8px;
+  color: $text-color;
+}
+.placeholder {
+  color:#999; 
+}
+.options:hover {
+  background-color: $label-color;
+  color: #fff;
+  cursor: pointer;
+  margin-left: -5px;
+  margin-right: -10px;
+}
+/* Remove focus */
+.select:focus {
+  outline: none}
+
+/* Hide label */
+.mdl-selectfield label {
+  font-size:14px;
+  color: $label-color;
+  margin-bottom: 0;
+}
+.group { 
+  width: 100%; 
+  margin-bottom: -5px;
+  margin-top: 2px;
+}
+.search-input {
+
+  font-size:18px;
+  padding: 4px 10px 5px 32px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* Search LABEL ======================================= */
+.search-label 				 {
+  color:#999 !important; 
+  font-size:18px;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top: 28px;
+}
+.clear {
+  color: #999 !important; 
+  font-size: 18px;
+  position: absolute;
+  right: 26px;
+  top: 28px;
+  cursor: pointer !important;
+}
+/* active state */
+// input:focus ~ label, input:valid ~ label 		{
+
+//   font-size:14px;
+//   color: $label-color;
+// }
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:$label-color; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:$label-color;; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:$label-color;; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:$label-color;; }
+  to 	{ width:0; background:transparent; }
+}

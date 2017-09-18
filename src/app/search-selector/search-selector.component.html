@@ -1,0 +1,22 @@
+<div class="mdl-selectfield">
+  <label for="{{inputName}}" class="{{labelClasses}}">{{label}}</label>
+  <div (click)="toggleDropdown()">
+    <div class="selected"  [hidden]="open">{{placeholder}}</div>
+    <div class="group" *ngIf="open || !placeholder">
+      <input class="search-input form-control" type="text" 
+        [(ngModel)]="searchText" required="">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label class="search-label" for="search"><i class="material-icons">search</i></label>
+      <div class="clear">
+        <i (click)="searchText = ''" class="material-icons">clear</i>
+      </div>
+    </div>
+  </div>
+  <p class="border"></p>
+  <div class="select animated slideDown" [hidden]="!open">
+    <div class="options" *ngFor="let option of options | searchFilter: searchText" (click)="selected(option)">{{option.name}}</div>
+  </div>
+  <error-text *ngIf="formError" [errors]="[formError]"></error-text>
+</div>
+

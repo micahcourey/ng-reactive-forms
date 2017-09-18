@@ -10,7 +10,11 @@
     <selector 
       [formGroup]="testForm" [inputName]="'user_role'" [placeholder]="'Select a user role'"
       [label]="'User Role'" [options]="userRoles">
-    </selector> 
+    </selector>
+    <search-selector [formGroup]="testForm" [inputName]="'state'" 
+        [label]="'Select a state'" [options]="states">
+
+    </search-selector>
   </div>
   <div>
     {{ testForm.value | json }}

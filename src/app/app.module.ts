@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { SelectorComponent } from './selector/selector.component';
 import { ErrorTextComponent } from './error-text/error-text.component';
+import { SearchSelectorComponent } from './search-selector/search-selector.component';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { ErrorTextComponent } from './error-text/error-text.component';
     AppComponent,
     TextInputComponent,
     SelectorComponent,
-    ErrorTextComponent
+    ErrorTextComponent,
+    SearchSelectorComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
