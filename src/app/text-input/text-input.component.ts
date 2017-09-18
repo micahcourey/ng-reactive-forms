@@ -16,6 +16,9 @@ export class TextInputComponent implements OnInit {
   @Input() value: any;
   @Input() type: string;
   @Input() optional: boolean;
+  @Input() min: number;
+  @Input() max: number;
+  @Input() step: number;
 
   public formError;
 

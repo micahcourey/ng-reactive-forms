@@ -63,6 +63,9 @@ input:focus ~ label, input:not(:placeholder-shown) ~ label	{
 }
 .error:before, .error:after {
   background: $error-text;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
 }
 .errorgroup {
   margin-bottom: 29px;

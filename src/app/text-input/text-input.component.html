@@ -1,10 +1,17 @@
 <div class="group" [formGroup]="formGroup" [ngClass]="{errorgroup: formError}">      
   <input formControlName="{{inputName}}" 
-    class="form-control" type="{{type}}" 
-    id="{{inputName}}" placeholder=" ">
+    class="form-control" 
+    type="{{type}}" 
+    id="{{inputName}}"
+    min={{min}}
+    max={{max}}
+    step={{step}}
+    placeholder=" ">
   <span class="highlight"></span>
   <span class="bar" [ngClass]="{error: formError}"></span>
-  <label for="{{inputName}}">{{label}} <span class="optional" *ngIf="optional">(optional)</span></label>
+  <label for="{{inputName}}">
+    {{label}} <span class="optional" *ngIf="optional">(optional)</span>
+  </label>
   <error-text [hidden]="!formError" [errors]="[formError]"></error-text>
 </div>
 
