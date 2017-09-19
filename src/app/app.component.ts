@@ -23,7 +23,7 @@ export class AppComponent {
         Validators.email
       ]),
       user_role: new FormControl(null, []),
-      country: new FormControl(null, [])
+      state: new FormControl(null, [])
     });
     this.userRoles = [
       { 'value': 1, 'name': 'Administrator' },

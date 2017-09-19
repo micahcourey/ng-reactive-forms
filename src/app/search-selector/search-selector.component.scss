@@ -11,7 +11,7 @@ $select-padding: 4px 10px 2px 5px;
 }
 .mdl-selectfield {
   margin-bottom: 2.8em;
-  top: -28px;
+  top: -16px;
   margin-bottom: 2px;
   position: relative;
     &:after {
@@ -42,7 +42,7 @@ $select-padding: 4px 10px 2px 5px;
   position: absolute;
   border: 1px solid $label-color;
   margin-bottom: 1em;
-  margin-top: -16px;
+  margin-top: 0;
 }
 .selected {
   margin-left: 8px;
@@ -51,6 +51,7 @@ $select-padding: 4px 10px 2px 5px;
 }
 .border {
   padding-top: 4px;
+  margin: 0;
   border-bottom: 1px solid $border-color;
 }
 .options {
@@ -99,14 +100,14 @@ input:focus 		{ outline:none; }
   position:absolute;
   pointer-events:none;
   left:5px;
-  top: 28px;
+  top: 24px;
 }
 .clear {
   color: #999 !important; 
   font-size: 18px;
   position: absolute;
   right: 26px;
-  top: 28px;
+  top: 24px;
   cursor: pointer !important;
 }
 /* active state */

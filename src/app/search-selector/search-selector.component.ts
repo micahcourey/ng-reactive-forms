@@ -107,6 +107,9 @@ export class SearchSelectorComponent implements OnInit, OnChanges, AfterContentC
   } 
 
   toggleDropdown() {
+    if (this.open) {
+      this.open = false
+    }
     this.open = true;
   }
 
